@@ -1,6 +1,6 @@
 puts "Enter a sentence you want to display vertically:"
 array = gets.chomp
-puts "============="
+puts "=" * array.length
 array = array.split(/ /)
 #array = ["let", "the", "bodies", "hit", "the", "floor"]
 
