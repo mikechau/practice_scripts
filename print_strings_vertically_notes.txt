@@ -1,0 +1,32 @@
+# Notes for displaying text vertically
+
+I take a sentence, and place each word into an array
+
+"this is a sentence" becomes
+["this", "is", "a", "sentence"]
+
+then I find the largest word and count it, "sentence" = 8 and I save this for later.
+
+so next I break the words down into a array of arrays of each words letters so like:
+[ ["t","h","i","s"], ["i","s"], ... ]
+
+and then I check the nested array (since there are arrays inside a main array) to make sure the length is equal to that sentence size which is 8. so for example:
+
+["t", "h", "i", "s"] is only 4, I take the difference 8-4 and that is 4 so I tell it to add 4 spaces.
+
+["t","h","i","s"," ", " ", " ", " "] now its 8 characters long like sentence is. this is important later.
+
+so now I am going to create a new array and collect each element in the array and push it into a new array. ie I take the first element of every array and that becomes a new array.
+
+ie: [ ["t", "h", "i", "s", " ", " ", " ", " "], ["I", "s", " ", " ", " ", " ", " ", " ", " "] ... ]
+
+becomes:
+
+[ ["t", "i", ...], ["h", "s"] ... ] <- you can see the first array now only has the first letters, the second array has only 2nd letters, etc
+
+that new array I take and convert those nested arrays back into strings seperated by a space so it displays like so
+
+t i . . .
+h s
+I
+s
